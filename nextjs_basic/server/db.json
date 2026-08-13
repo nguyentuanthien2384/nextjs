@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn React",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Learn Next.js",
+      "completed": true
+    },
+    {
+      "title": "Learn NodeJs",
+      "content": "hihi",
+      "completed": false,
+      "id": "JfijZMJOggU"
+    }
+  ],
+
+  "$schema": "./node_modules/json-server/schema.json"
+}
