@@ -1,10 +1,12 @@
 import React from "react";
+import Title from "./_components/Title";
+import About from "./_components/About";
 
 export default function AboutPage() {
   return (
     <div>
-      <h1>About Us</h1>
-      <p>Trang giới thiệu</p>
+      <Title title="Chào mừng bạn" />
+      <About />
     </div>
   );
 }
