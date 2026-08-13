@@ -14,13 +14,18 @@ export const dynamic = "force-dynamic";
 const getTodo = async (id: string) => {
   const SERVER_API =
     process.env.NEXT_PUBLIC_SERVER_API || "http://localhost:3001";
-  const response = await fetch(`${SERVER_API}/todos/${id}`, {
-    cache: "no-store",
-  });
-  if (!response.ok) {
+  try {
+    const response = await fetch(`${SERVER_API}/todos/${id}`, {
+      cache: "no-store",
+    });
+    if (!response.ok) {
+      return null;
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching todo:", error);
     return null;
   }
-  return response.json();
 };
 
 export default async function TodoDetailPage({ params }: Params) {
